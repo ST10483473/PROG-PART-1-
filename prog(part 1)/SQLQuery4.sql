@@ -1,31 +1,32 @@
--- Insert sample users
+-- Step 3: Insert sample data
 INSERT INTO Users (Name, Email, PasswordHash, Role)
 VALUES 
-('John Organiser', 'john@raceday.com', 'hashedpassword1', 'Organiser'),
-('Mary Participant', 'mary@raceday.com', 'hashedpassword2', 'Participant'),
-('Sam Runner', 'sam@raceday.com', 'hashedpassword3', 'Participant');
+('John Organiser', 'john@rcd.com', 'LewisHam4Ever', 'Organiser'),
+('Mary Driver', 'mary@rcd.com', 'MaryVerstAppen', 'Participant'),
+('Sam Rider', 'sam@rcd.com', 'SammySchumi', 'Participant'),
+('Lucy Organiser', 'lucy@rcd.com', 'LucyLauda', 'Organiser'),
+('David Racer', 'david@rcd.com', 'DavidSenna', 'Participant');
 
--- Insert sample events
 INSERT INTO Events (OrganiserID, EventName, EventDate, Location, Description)
 VALUES 
-(1, 'Soweto Marathon', '2026-11-01', 'Soweto', 'Annual marathon event'),
-(1, 'Cape Town Cycle Tour', '2026-03-10', 'Cape Town', 'World’s largest timed cycle race');
+(1, 'Kyalami Grand Prix', '2026-11-01', 'Johannesburg', 'International Formula 1 race'),
+(4, 'Durban Drag Race', '2026-03-10', 'Durban', 'Quarter-mile drag racing event'),
+(1, 'Cape Town Rally', '2026-07-15', 'Cape Town', 'Multi-stage rally race');
 
--- Insert sample categories
 INSERT INTO Categories (EventID, CategoryName, Distance)
 VALUES 
-(1., '10km Run', 10.00),
-(1., '42km Marathon', 42.20),
-(2., '55km Cycle', 55.00);
+(1, 'Formula 1 – 50 Laps', 250.00),
+(2, 'Drag Race – 400m', 0.40),
+(3, 'Rally – 200km Stage', 200.00);
 
--- Insert sample enrolments
-INSERT INTO Enrolments (ParticipantID, CategoryID)
+INSERT INTO Enrolments (ParticipantID, CategoryID, EnrolmentCode)
 VALUES 
-(2, 1),  -- Mary in 10km Run
-(3, 2);  -- Sam in 42km Marathon
+(2, 1, 'Mary(1)'),
+(3, 2, 'Sam(2)'),
+(5, 3, 'David(3)');
 
--- Insert sample results
 INSERT INTO Results (EnrolmentID, FinishTime, Position)
 VALUES 
-(1, '00:55:30', 25),  -- Mary’s 10km result
-(2, '03:45:10', 102); -- Sam’s marathon result
+(1, '01:45:30', 3),
+(2, '00:00:12', 1),
+(3, '02:35:10', 5);
