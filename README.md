@@ -47,7 +47,11 @@ Categories --> Enrolments = Participants
 Enrolments --> Results = Each enrolment can have one race result ( EnrolmentID FK) 
 
 
+ERD DIAGRAM 
 
+<img width="1097" height="902" alt="image" src="https://github.com/user-attachments/assets/945dbca5-ed14-4a8d-a3a7-ec4d3aea5e85" />
+
+<img width="1097" height="902" alt="raceday drawio" src="https://github.com/user-attachments/assets/ca44208d-166e-428f-a4f8-77dbb89dd668" />
 
 
 
